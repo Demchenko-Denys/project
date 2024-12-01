@@ -1,0 +1,32 @@
+.galleryEmptySpace {
+  height: 100vh;
+  background-image: url('../images/library/noMovies.png');
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  background-position-x: center;
+  background-size: contain;
+}
+.no-movie {
+  font-size: 50px;
+  color: grey;
+  opacity: 0.4;
+  text-align: center;
+}
+.display-none {
+  display: none;
+}
+.library-genre-reset-left {
+  margin-left: 0;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--header-line-and-numbers);
+}
+
+.vote-average.library-genre-reset-left {
+  color: #ffffff;
+}
+
+.section-library-height {
+  min-height: 80vh;
+}

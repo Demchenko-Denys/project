@@ -1,0 +1,107 @@
+.gallery {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.movie-list {
+  margin: 0 auto;
+  list-style: none;
+  .movie-card-list {
+    display: flex;
+    list-style: none;
+  }
+  .movie-card-item {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--header-line-and-numbers);
+  }
+  .movie-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.33;
+    color: var(--black);
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .movie-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 440px;
+    grid-gap: 20px;
+    max-width: 280px;
+
+    .movie-body {
+      width: 280px;
+      height: 398px;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 440px;
+    grid-gap: 30px;
+    max-width: 618px;
+
+    .movie-body {
+      width: 294px;
+      height: 398px;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .movie-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 440px;
+    grid-gap: 30px;
+    max-width: 882px;
+    .movie-title {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33;
+      color: var(--black);
+      text-transform: uppercase;
+    }
+    .movie-body {
+      width: 274px;
+      height: 398px;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .movie-card-item {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.33;
+      color: var(--header-line-and-numbers);
+    }
+  }
+}
+
+//анимация карточек
+
+.movie-card {
+  transition: all var(--animation-duration) ease;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+  }
+}

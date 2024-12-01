@@ -1,0 +1,56 @@
+<div class="modal-movie-card">
+    <div class="modal-poster-container">
+        <img class="modal-movie-poster" src="https://image.tmdb.org/t/p/original{{poster_path}}" alt="{{original_title}} poster" data-id={{id}}>
+            <button type="button" class="youtube-btn youtubeBtn-js" data-tailer="youtube" data-id={{id}}>
+                <svg class="modal-play-icon" width="100" height="100"></svg>
+            </button>
+    </div>
+
+    <div class="card-descr-container">
+
+        <h1 class="modal-movie-title">{{title}}</h1>
+
+        <div class="card-descr-elements">
+
+            <p class="card-descr-elem votes">Vote / Votes
+                <span class="vote-average">{{vote_average}}</span> 
+                / 
+                <span class="vote-count">{{vote_count}}</span>
+            </p>
+
+            <p class="card-descr-elem">Popularity
+                <span class="pop">{{popularity}}</span>
+            </p>
+
+            <p class="card-descr-elem">Original Title
+                <span class="original">{{original_title}}</span>
+            </p>
+
+            <div class="genres-wrapper">
+
+                <p class="card-descr-elem genres">Genre</p>
+                <p class="genres-list">
+                    {{#each genres}}
+                    <span class="genre-item">{{this.name}}</span>
+                    {{/each}}
+                </p>
+
+            </div>
+
+        </div>
+
+        <p class="modal-about">About</p>
+        <p class="modal-movie-description">{{overview}}</p>
+
+    <div class="modal-btn-container">
+    
+        <button type='button' class="add-btn watched" data-dir="watched" data-id={{id}}>{{wbuttonText}}</button>
+    
+        <button type='button' class="add-btn queue" data-source="queue" data-id={{id}}>{{qbuttonText}}</button>
+    
+    </div>
+
+    </div>
+
+</div>
+

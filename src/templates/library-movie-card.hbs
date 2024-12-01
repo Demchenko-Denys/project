@@ -1,0 +1,14 @@
+{{#each this}}
+<li class='movie-card movie-card-js'>
+    <div class='movie-body'>
+        <img src='https://image.tmdb.org/t/p/original/{{poster_path}}' alt='{{original_title}}' class='movie-image' data-action={{id}} />
+    </div>
+    <div class='movie-about'>
+        <h3 class='movie-title'>{{original_title}}</h3>
+        <ul class="movie-card-list">
+            <li class="movie-card-item">
+                <p class="elem">{{#each genres}}<span class="genre library-genre-reset-left">{{this.name}}</span>{{/each}}<span class="genre library-genre-reset-left">&nbsp| {{release_date}}</span>  <span class="vote-average library-genre-reset-left">{{vote_average}}</span></p>
+        </ul>
+    </div>
+</li>
+{{/each}}

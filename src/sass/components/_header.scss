@@ -1,0 +1,314 @@
+.header {
+  max-height: 230px;
+  background-color: rgb(8, 8, 8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+// --- КЛАСС ДЛЯ ФОНА Основной странички ---
+.header-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobile/background-home-mobile@1x.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+    screen and (min-resolution: 192dpi) and (min-width: 320px),
+    screen and (min-resolution: 2dppx) and (min-width: 320px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/mobile/background-home-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/tablet/background-home-tablet@1x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/tablet/background-home-tablet@2x.jpg');
+  }
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/desktop/background-home-desktop@1x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+    screen and (min-resolution: 192dpi) and (min-width: 1024px),
+    screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/desktop/background-home-desktop@2x.jpg');
+  }
+}
+
+// --- КЛАСС ДЛЯ ФОНА БИБЛИОТЕКИ ---
+.header-library {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url('../images/mobile/background-library-mobile@1x.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+    screen and (min-resolution: 192dpi) and (min-width: 320px),
+    screen and (min-resolution: 2dppx) and (min-width: 320px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/mobile/background-library-mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/tablet/background-library-tablet@1x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+    screen and (min-resolution: 192dpi) and (min-width: 768px),
+    screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/tablet/background-library-tablet@2x.jpg');
+  }
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/desktop/background-library-desktop@1x.jpg');
+  }
+
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+    screen and (min-resolution: 192dpi) and (min-width: 1024px),
+    screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url('../images/desktop/background-library-desktop@2x.jpg');
+  }
+}
+
+// --- ОБЩИЕ СТИЛИ для двух вариантов хэдера --- //
+
+.header .container {
+  padding-top: 46px;
+  padding-bottom: 97px;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  margin-bottom: 41px;
+}
+
+.header-logo {
+  transition: transform var(--animation-duration) var(--timing-function),
+    stroke var(--animation-duration) var(--timing-function);
+}
+
+.main-page-link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.667;
+  color: white;
+  stroke: #818181;
+  transition: color var(--animation-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--header-line-and-numbers);
+    stroke: var(--header-focus);
+    outline: none;
+  }
+
+  &:hover .header-logo,
+  &:focus .header-logo {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list-item {
+  position: relative;
+}
+
+.nav-list-item:last-child {
+  margin-left: 39px;
+}
+
+.nav-list-link {
+  text-transform: uppercase;
+  color: white;
+  line-height: 1.667;
+  transition: color var(--animation-duration) var(--timing-function);
+
+  &:hover {
+    color: var(--header-line-and-numbers);
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+//----------- HOME PAGE -----------//
+
+.search-form {
+  position: relative;
+  display: block;
+
+  width: 280px;
+  height: 20px;
+  margin: 0 auto;
+}
+
+.search-form-input {
+  display: block;
+  width: 100%;
+
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid white;
+  color: white;
+  transition: border-width var(--animation-duration) var(--timing-function),
+    border-color var(--animation-duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    border-bottom: 3px solid var(--button-and-text-orange);
+  }
+}
+
+.search-input-icon {
+  stroke: white;
+  position: absolute;
+  top: 0%;
+  right: 0;
+  transition: stroke var(--animation-duration) var(--timing-function),
+    transform var(--animation-duration) var(--timing-function);
+}
+
+//---- Изменение иконки поиска при ховере-фокусу -----//
+.search-form-input:hover + .search-input-icon,
+.search-form-input:focus + .search-input-icon {
+  stroke: var(--header-focus);
+  transform: scale(1.5);
+}
+
+//----- Стилизация плейсхолдера ------//
+::placeholder {
+  opacity: 1;
+  color: white;
+}
+.search-form:hover ::placeholder {
+  opacity: 0.5;
+}
+
+// добавление прозрачности плейсхолдера при фокусе на всех браузерах//
+::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+::-moz-placeholder {
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:-moz-placeholder {
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity var(--animation-duration) var(--timing-function);
+}
+//
+
+//----------- library PAGE -----------//
+
+//добавляет псевдоэлемент
+.current-page::after {
+  position: absolute;
+  bottom: -3px;
+
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: var(--header-line-and-numbers);
+}
+
+//стилизирует кнопки
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  &-item:last-child {
+    margin-left: 15px;
+  }
+}
+
+.library-btn {
+  border-radius: 5px;
+  padding: 14px 38px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+// Стили для активной и неактивной кнопки
+.enabled-btn {
+  background-color: var(--button-and-text-orange);
+  border: 1px solid var(--button-and-text-orange);
+  transition: background-color var(--animation-duration) var(--timing-function),
+    border var(--animation-duration) var(--timing-function);
+}
+
+.disabled-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  transition: background-color var(--animation-duration) var(--timing-function),
+    border var(--animation-duration) var(--timing-function);
+}
+
+//-------- ADAPTATION -------//
+
+@media screen and (min-width: 320px) {
+}
+
+@media screen and (max-width: 768px) {
+  .site-title {
+    display: none;
+  }
+
+  .buttons-item:last-child {
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-form {
+    width: 336px;
+  }
+
+  .header .container {
+    padding-top: 41px;
+  }
+
+  .nav {
+    margin-bottom: 38px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}
